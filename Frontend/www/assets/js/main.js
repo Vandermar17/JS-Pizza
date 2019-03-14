@@ -231,7 +231,6 @@ function addToCart(pizza, size) {
         size: size,
         quantity: 1
     });
-
     //Оновити вміст кошика на сторінці
     updateCart();
 }
@@ -239,7 +238,7 @@ function addToCart(pizza, size) {
 function removeFromCart(cart_item) {
     //Видалити піцу з кошика
     //TODO: треба зробити
-
+    Cart.pop(cart_item);
     //Після видалення оновити відображення
     updateCart();
 }
@@ -276,6 +275,12 @@ function updateCart() {
 
             //Оновлюємо відображення
             updateCart();
+        });
+        $node.find(".minus").click(function(){
+           var number=cart_item.quantity;
+           if(number>1)
+               cart_item.quantity-=1;
+           updateCart();
         });
 
         $cart.append($node);

@@ -1,9 +1,35 @@
 <div>
-    <%= pizza.title %> (<%= size %>)
-    <div>Ціна: <%= pizza[size].price %> грн.</div>
-    <div>
-        <button class="btn btn-danger minus">-</button>
-        <span class="label label-default"><%= quantity %></span>
-        <button class="btn btn-success plus">+</button>
+    <div class="informer">
+        <div class=" row ">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="row">
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                        <div class="row cart-info">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-12">
+                                <span  class="pizza-name"><%= pizza.title %></span> <span>(<%= size %>)</span>
+                            </div>
+                            <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12">
+                                <span> <img src="assets/images/size-icon.svg"><small> <%= pizza[size].size %></small></span>
+
+                                <span> <img src="assets/images/weight.svg"> <small><%= pizza[size].weight %></small></span>
+                            </div>
+                            <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12">
+                                <span class="money"><%= pizza[size].price %> </span><span>грн</span>
+                                <button type="button" class="btn btn-danger minus">-</button>
+                                <span><%= quantity %></span>
+                                <button type="button" class="btn btn-success plus" id="<%= pizza.title %>-<%= size %>" >+</button>
+                                <button type="button" class="btn btn-default">x</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 photo">
+
+                        <img class="cart-img" src="<%= pizza.icon %>" class="img-responsive">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

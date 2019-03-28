@@ -9,7 +9,12 @@
 body{
 min-width: 550px;
 }
-
+.buy-big{
+font-size: 10px;
+}
+.buy-small{
+  font-size: 10px!important;
+}
 .menu-title{
 
   max-height: 100px;
@@ -23,6 +28,9 @@ min-width: 550px;
   margin-bottom: 10px;
 }
 @media(min-width:@screen-sm-max ){
+  .thumbnail{
+    height: 600px;
+  }
   .menu-title{
     font-size:@menu-text-size;
   }
@@ -136,12 +144,15 @@ min-width: 400px;
 }
 #everyone{
   text-align: right!important;
-
+  color:white;
+}
+.menuOp{
+  border-radius: 20px;
 }
 #everyone-small{
-  border-radius: 20px;
+
   background-color:@mainColor;
-  color:white;
+
 }
 .capacity{
   padding-left: -25px;
@@ -164,10 +175,9 @@ min-width: 400px;
 .price{
   margin:1px;
 }
-.caption{
-  .pizza-description-numbers{
+
+.pizza-description-numbers{
     text-align: center;
-  }
 }
 .bage-bottom-father{
   position:fixed;
@@ -189,6 +199,7 @@ min-width: 400px;
 
   }
 }
+
 .bage-bottom-text{
   border-bottom-style: dotted;
   border-bottom-width: 5px;

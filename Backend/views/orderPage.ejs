@@ -1,0 +1,73 @@
+<% include common/header.ejs %>
+
+
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-12 ">
+
+<div class="form-horizontal order-form">
+    <div class="form-control-static col-sm-12">
+        <p  class="form-control-static"><h4>Контактні данні</h4  ></p>
+    </div>
+    <div class="form-group name-input">
+        <label for="inputName" class="col-sm-2 control-label">Ім'я</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputName" placeholder="Ім'я Прізвище">
+        </div>
+    </div>
+    <div class="form-group phone-input">
+        <label for="inputPhone" class="col-sm-2 control-label">Телефон</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputPhone" placeholder="+38005553535">
+        </div>
+    </div>
+    <div class="form-group adres-input">
+        <label for="inputAdres" class="col-sm-2 control-label">Адреса</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputAdres" placeholder="Київ,вул.Спаська,2">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-10 col-sm-2">
+            <button type="submit" class="btn btn-warning submit-form">Далі ></button>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="col-xs-3  col-sm-3   col-md-3  col-lg-3 " id="cart">
+    <div class=" cart-body">
+        <div class=" row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 cart-header-description">
+                <span type="button">Замовлення</span>
+            </div>
+            <div class="col-xs-7  col-sm-7  col-md-7  col-lg-7 cleanup-button">
+                <span class="cleanup"><small>Очистити корзину</small></span>
+            </div>
+
+
+        </div>
+        <div id="cart-info">
+
+        </div>
+        <div class="buybutton">
+            <div class="row ">
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 buybutton-description">
+                    <span><h6>Сумма замовлення</h6></span>
+                </div>
+                <div class="col-xs-2  col-sm-2  col-md-2  col-lg-2 buybutton-description">
+                    <span class="price-span">0</span><span>грн</span>
+                </div>
+                <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12">
+                    <a class="buybutt btn btn-primary" href="/"> Редагувати</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<% include common/footer.ejs %>

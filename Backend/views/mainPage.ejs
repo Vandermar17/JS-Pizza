@@ -1,0 +1,83 @@
+<% include common/header.ejs %>
+
+<div class="row menu-title left">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+
+        <div class="row title">
+            <div class="col-xs-5 col-xs-offset-1 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1">
+                <h3 id="everyone">Усі </h3>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 capacity">
+                <span ><h5 id="orangebage">3</h5></span>
+            </div>
+        </div>
+
+        <div class="row menu-options">
+                    <span class="col-xs-6  col-sm-1  col-md-1 menuOp" id="everyone-small">
+                        Усі
+                    </span>
+            <sapn class="col-xs-6  col-sm-1 col-sm-offset-1 col-md-1 col-md-offset-1 menuOp" id="М’ясна-піца">
+                М'ясні
+            </sapn>
+            <sapn class="col-xs-6  col-sm-3  col-md-3 menuOp" id="Ананасова-піца">
+                З ананасами
+            </sapn>
+            <span class="col-xs-6 col-sm-3  col-md-3  menuOp" id="Морська-піца">
+                        З морепродуктами
+                    </span>
+            <span class="col-xs-6  col-sm-1  col-md-1 menuOp" id="Грибна-піца">
+                        Грибна
+                    </span>
+            <span class="col-xs-6  col-sm-1 col-sm-offset-1 col-md-1 col-md-offset-1 menuOp"id="Вега-піца">
+                        Вега
+                    </span>
+        </div>
+    </div>
+
+</div>
+<!-- </div>-->
+<!--  <div class="container">-->
+<div class="row left" id="pizza_list">
+
+
+
+
+
+</div>
+<!--  </div>-->
+</div>
+
+
+<div class="col-xs-3  col-sm-3   col-md-3  col-lg-3 " id="cart">
+    <div class=" cart-body">
+        <div class=" row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 cart-header-description">
+                <span type="button">Замовлення</span>
+            </div>
+            <div class="col-xs-7  col-sm-7  col-md-7  col-lg-7 cleanup-button">
+                <span class="cleanup"><small>Очистити корзину</small></span>
+            </div>
+
+
+        </div>
+        <div id="cart-info">
+
+        </div>
+        <div class="buybutton">
+            <div class="row ">
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 buybutton-description">
+                    <span><h6>Сумма замовлення</h6></span>
+                </div>
+                <div class="col-xs-2  col-sm-2  col-md-2  col-lg-2 buybutton-description">
+                    <span class="price-span">0</span><span>грн</span>
+                </div>
+                <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12">
+                    <a class="buybutt btn btn-warning" href="/order.html"> Замовити</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<% include common/footer.ejs %>

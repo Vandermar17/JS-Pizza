@@ -20,13 +20,13 @@ function addToCart(pizza, size) {
 var contains=false;
     //Приклад реалізації, можна робити будь-яким іншим способом
     Cart.forEach(function(el){
-        if(pizza.title==el.pizza.title && size==el.size ) {
+        if(pizza.id==el.pizza.id && size==el.size ) {
             console.log("hi");
             contains=true;
         }
         });
     if(contains){
-       var name=pizza.title+"-"+size;
+       var name=pizza.id+"-"+size;
 console.log(name);
 
         $cart.find("#"+name).trigger("click");
@@ -63,10 +63,14 @@ function removeFromCart(cart_item) {
 }
 
 function initialiseCart() {
-     Cart=JSON.parse(localStorage.getItem("Cart"));
+    Cart=JSON.parse(localStorage.getItem("Cart"));
     $money = $cart.parent().find(".price-span");
-    $money.text(JSON.parse(localStorage.getItem("Money")));
-
+    if(Cart!=null) {
+        $money.text(JSON.parse(localStorage.getItem("Money")));
+    }else{
+        $money.text("0");
+        Cart=[];
+    }
     var $father=$cart.parent();
     $father.find(".cleanup").click(function(){
         $father.find(".price-span").text(0);
@@ -129,6 +133,13 @@ function updateCart() {
         localStorage.setItem("Cart",JSON.stringify(Cart));
         localStorage.setItem("Money",JSON.stringify($money.text()));
         }
+
+    if( !Cart.length==0) {
+        $(".buybutt").removeClass("disabled");
+    }
+    else {
+        $(".buybutt").addClass("disabled");
+    }
 
        Cart.forEach(showOnePizzaInCart);
 

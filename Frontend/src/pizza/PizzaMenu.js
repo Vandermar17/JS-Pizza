@@ -3,7 +3,7 @@
  */
 var Templates = require('../Templates');
 var PizzaCart = require('./PizzaCart');
-var Pizza_List = require('../Pizza_List');
+var Pizza_List = null;
 
 //HTML едемент куди будуть додаватися піци
 var $pizza_list = $("#pizza_list");
@@ -32,23 +32,11 @@ function showPizzaList(list) {
     $("#orangebage").text(list.length);
 }
 
-function filterPizza(filter) {
-    //Масив куди потраплять піци які треба показати
-    var pizza_shown = [];
 
-    Pizza_List.forEach(function(pizza){
-        //Якщо піка відповідає фільтру
-        //pizza_shown.push(pizza);
 
-        //TODO: зробити фільтри
-    });
-
-    //Показати відфільтровані піци
-    showPizzaList(pizza_shown);
-}
-
-function initialiseMenu() {
+function initialiseMenu(data) {
     //Показуємо усі піци
+    Pizza_List=data;
     showPizzaList(Pizza_List);
     var currentSelected="everyone-small";
     $("#everyone-small").click(function(){
@@ -106,5 +94,5 @@ function initialiseMenu() {
 
 }
 
-exports.filterPizza = filterPizza;
+
 exports.initialiseMenu = initialiseMenu;

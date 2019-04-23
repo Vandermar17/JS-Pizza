@@ -6,8 +6,7 @@ var pizza_info = [
     {
         id:1,
         icon:'assets/images/pizza_7.jpg',
-        title: "Імпреза",
-        type: 'М’ясна піца',
+     type: 'М’ясна піца',
         content: {
             meat: ['балик', 'салямі'],
             chicken: ['куриця'],

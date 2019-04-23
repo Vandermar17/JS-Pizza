@@ -8,7 +8,6 @@ exports.mainPage = function(req, res) {
 };
 
 exports.orderPage = function(req, res) {
-    console.log("hi");
     res.render('orderPage',{
        pageTitle:'Оформлення замовлення'
     });

@@ -21,34 +21,27 @@ var contains=false;
     //Приклад реалізації, можна робити будь-яким іншим способом
     Cart.forEach(function(el){
         if(pizza.id==el.pizza.id && size==el.size ) {
-            console.log("hi");
             contains=true;
+            el.quantity+=1;
         }
         });
-    if(contains){
-       var name=pizza.id+"-"+size;
-console.log(name);
-
-        $cart.find("#"+name).trigger("click");
-    }
-  else {
+    if(!contains){
         Cart.push({
             pizza: pizza,
             size: size,
             quantity: 1
         });
-        $money = $cart.parent().find(".price-span");
-        var m = parseInt($money.text());
-        m += pizza[size].price;
-        $money.text(m);
     }
+    $money = $cart.parent().find(".price-span");
+    var m = parseInt($money.text());
+    m += pizza[size].price;
+    $money.text(m);
     //Оновити вміст кошика на сторінці
     updateCart();
 }
 
 function removeFromCart(cart_item) {
-    //Видалити піцу з кошика
-    //TODO: треба зробити
+
     var html_code = Templates.PizzaCart_OneItem(cart_item);
 
     var $node = $(html_code);

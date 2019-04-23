@@ -17,6 +17,7 @@ exports.disable=function disable(){
 };
 
 exports.check= function checkName(){
+
   var $input=$("#inputName");
   var $inputAdres=$("#inputAdres");
   var $inputPhone=$("#inputPhone")
@@ -53,7 +54,7 @@ exports.check= function checkName(){
           &&  $(".name-input").hasClass("has-success") )
       {
           require('./API').createOrder({name:$input.val(),phone:$inputPhone.val()
-          ,adres:$(".adres-input")},function(){
+          ,adres:$inputAdres.val(),pizza:JSON.parse(localStorage.getItem("Cart"))},function(){
               console.log("success");
           });
       }
